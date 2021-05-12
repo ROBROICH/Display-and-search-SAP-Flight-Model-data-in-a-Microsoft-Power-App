@@ -18,7 +18,7 @@ The SAP data will be fetched by calling the SAP Business Application Programming
 A detailed description of the BAPI can be found here:
 [BAPI_FLIGHT_GETLIST SAP ABAP Function Module - Find list of flights (se80.co.uk)](https://www.se80.co.uk/sapfms/b/bapi/bapi_flight_getlist.htm)
 
-To implement the scenario four major steps have to be implemented: 
+To implement the scenario four major steps are required: 
 *  Preparation of demo environment  
 *  Install and configure on-prem gateway 
 *  Create instant cloud flow 
@@ -90,7 +90,8 @@ This instant cloud flow will create the connection to the SAP Netweaver system a
 * After maintaining the parameters, the next steps is to the test and execute the function by clicking on “Test” in the right top corner. The test is primarily required to collect the schema information of the BAPIs result set. 
 ![Test Call SAP function](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/Flow_InstantCloudFlow_TestSAPFunction.png?raw=true)
 
-* Next to successfully executing the flow and calling the BAPI, please copy and save the content of the text box “FLIGHT_LIST” as template for the following schema maintenance. 
+* Next to successfully executing the flow and calling the BAPI, please copy and save the content of the text box “FLIGHT_LIST” as template for the following schema maintenance.
+
 ![Test Call SAP function result](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/Flow_InstantCloudFlow_TestSAPFunction_Result.png?raw=true)
 
 * Subsequent saving the schema information, please add a HTTP response as next step in the flow. 
@@ -99,7 +100,7 @@ This instant cloud flow will create the connection to the SAP Netweaver system a
 * Select the FLIGHT_LIST as body 
 ![Select HTTP response body](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/Flow_InstantCloudFlow_HTTP_response_body.png?raw=true)
 
-* And generate the schema from by copying the previously saved BAPI return parameters and selecting “Generate from sample” 
+* And generate the schema by copying the previously saved BAPI return parameters(Schema) and then selecting “Generate from sample” 
 ![Select HTTP generate sample](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/Flow_InstantCloudFlow_HTTP_response_Json.png?raw=true)
 ![Select HTTP generate payload](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/Flow_InstantCloudFlow_HTTP_response_Json_payload.png?raw=true)
 
@@ -116,6 +117,7 @@ Next to successfully implementing the flow to call the SAP BAPI, the following b
 ![Canvas app select flow](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/CanvasApp_Flow_Selection.png?raw=true)
 
 * Insert a button and maintain the following formular for the button __"ClearCollect(queryResults,FLOW_GET_SFLIGHTS.Run(txtInputAirline.Text))"__
+
 Remark: The formular will shown an error until the next step, adding and renaming the text-input, is done. 
 The formular will create a collection which will be later referenced by the table control
 ![Canvas app submit button](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/CanvasApp_Submit_Button.png?raw=true)
@@ -126,11 +128,15 @@ The formular will create a collection which will be later referenced by the tabl
 * Add a data table (preview)
 ![Add data table](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/CanvasApp_InsertDataTable.png?raw=true)
 
-* Now maintain the queryResult Collection, maintained in the Submit button formular, as data source for the data table
-![maintain queryResult collection](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/CanvasApp_InsertDataTable.png?raw=true)
+* Now maintain the queryResult collection, maintained in the submit button formular, as data source for the data table
+![maintain queryResult collection](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/CanvasApp_DataTable_DataSource.png?raw=true)
 
 * Finally select relevant column names to display in the table 
-![maintain table column](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/CanvasApp_InsertDataTable.png?raw=true)
+![maintain table column](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/CanvasApp_DataTable_ColumnNames.png?raw=true)
+
+* As last optional step the colours or the look and feel of the general canvas app could be adjusted to the users preferences or corporate style-guide. After tweaking the UI, the application is ready to be tested and the result should look similar to this screenshot
+
+![Final result displayed](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/CanvasApp_designer_final_run.png?raw=true)
 
 🙏 Many thanks for your time and reading the document until here! 🙏
 
