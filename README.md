@@ -141,14 +141,18 @@ The formular will create a collection which will be later referenced by the tabl
 ## 👩‍💻 Summary
 🙏 First, many thanks for reading the article until here and hopefully the implementation of the demo went smoothly and was successful. 🙏
 
-Ideally this example demonstrated the easiness of creating SAP specific user interfaces with Microsoft Power Apps. 
+Ideally this example demonstrated the easiness of creating SAP Netweaver specific user interfaces with Microsoft Power Apps. 
 
 As always, please maintain an issue for this project in case of any feedback or suggestions for improvements. As well feel free to fork and enhance the project for you own purposes. 
 
 
-As outlook and based on feedback and priorities, there are current plans to extend the scenario with the write back of user inputs to the SAP system.  Another option would be triggering a Power Automate Flow from Microsoft PowerBI or demonstrating a [RPA playbook]https://flow.microsoft.com/de-de/blog/rpa-playbook-for-sap-gui-automation-with-power-automate-api-flows-ui-flows-and-power-automate-desktop/). 
+As outlook and based on feedback and priorities, there are current plans to extend the scenario with the write back of user entries to the SAP system.  Another option would be triggering a Power Automate Flow from Microsoft PowerBI or demonstrating a [RPA playbook]https://flow.microsoft.com/de-de/blog/rpa-playbook-for-sap-gui-automation-with-power-automate-api-flows-ui-flows-and-power-automate-desktop/). 
 
-Please feel free to contact the author in case of any ideas or use-cases required as tutorial. 
+Please feel free to contact the author on LinkedIn in case of any ideas or use-cases required as tutorial. 
+
+
+
+
 
 
 
