@@ -100,7 +100,7 @@ This instant cloud flow will create the connection to the SAP Netweaver system a
 * Select the FLIGHT_LIST as body 
 ![Select HTTP response body](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/Flow_InstantCloudFlow_HTTP_response_body.png?raw=true)
 
-* And generate the schema by copying the previously saved BAPI return parameters(Schema) and then selecting “Generate from sample” 
+* And generate the schema by copying the previously saved BAPI return parameters(__saved FLIGHT_LIST schema__) and then selecting “Generate from sample” 
 ![Select HTTP generate sample](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/Flow_InstantCloudFlow_HTTP_response_Json.png?raw=true)
 ![Select HTTP generate payload](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/Flow_InstantCloudFlow_HTTP_response_Json_payload.png?raw=true)
 
@@ -138,7 +138,20 @@ The formular will create a collection which will be later referenced by the tabl
 
 ![Final result displayed](https://github.com/ROBROICH/Display-and-search-SAP-Flight-Model-data-in-a-Microsoft-Power-App/blob/main/img/CanvasApp_designer_final_run.png?raw=true)
 
-🙏 Many thanks for your time and reading the document until here! 🙏
+## 👩‍💻 Summary
+🙏 First, many thanks for reading the article until here and hopefully the implementation of the demo went smoothly and was successful. 🙏
+
+Ideally this example demonstrated the easiness of creating SAP specific user interfaces with Microsoft Power Apps. 
+
+As always, please maintain an issue for this project in case of any feedback or suggestions for improvements. As well feel free to fork and enhance the project for you own purposes. 
+
+
+As outlook and based on feedback and priorities, there are current plans to extend the scenario with the write back of user inputs to the SAP system.  Another option would be triggering a Power Automate Flow from Microsoft PowerBI or demonstrating a [RPA playbook]https://flow.microsoft.com/de-de/blog/rpa-playbook-for-sap-gui-automation-with-power-automate-api-flows-ui-flows-and-power-automate-desktop/). 
+
+Please feel free to contact the author in case of any ideas or use-cases required as tutorial. 
+
+
+
 
 
 
